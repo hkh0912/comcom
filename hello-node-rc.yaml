@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: hello-node2-rc
+spec:
+  replicas: 3
+  selector:
+    app: hello-node2
+  template:
+    metadata:
+      name: hello-node2-pod
+      labels:
+        app: hello-node2
+    spec:
+      containers:
+      - name: hello-node2
+        image: gcr.io/homework-295112/hello-node2:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8081
