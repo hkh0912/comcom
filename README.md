@@ -1,2 +1,2 @@
 # comcom
-Winter
+Winter Internship Program
